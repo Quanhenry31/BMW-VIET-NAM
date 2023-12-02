@@ -1,0 +1,153 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(67, 92, 232);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+main {
+  display: inline-block;
+  float: right;
+  width: 800px;
+  margin: 30px 100px 0px 0px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+h2 {
+  justify-content: center;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 30px;
+  margin: 0 7px;
+  text-align: center;
+}
+
+.update-button,
+.checkout-button {
+  background-color: rgb(67, 92, 232);
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.update-button:hover,
+.checkout-button:hover {
+  background-color: rgb(67, 92, 232);
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(67, 92, 232);
+  color: #fff;
+  bottom: 0;
+}
+
+main2 {
+  display: inline-block;
+  max-width: 472px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 30px;
+}
+section.cart2 {
+  width: 470px;
+}
+.flex_td {
+  font-size: 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.apart {
+  width: 33px;
+  position: absolute;
+  left: 4%;
+  top: 2%;
+}
+.apart_all {
+  width: 33px;
+  position: absolute;
+  right: -14px;
+  top: 9%;
+}
+.hiden2 {
+  overflow-y: auto;
+  height: 500px;
+}
+.hiden3 {
+  overflow-y: auto;
+  height: 350px;
+}
+img.menu_item_car_img {
+  width: 100px;
+  height: 20%;
+}

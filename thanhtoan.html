@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán - BMW</title>
+    <link rel="stylesheet" href="./css/thanhtoan.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BMW - Trang Web Bán Ô Tô</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="Product_I4.html">Sản phẩm</a></li>
+          <li><a href="giohang.html">Giỏ hàng</a></li>
+          <li><a href="thanhtoan.html">Thanh toán</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="checkout-form">
+        <h2>Thông tin thanh toán</h2>
+        <form>
+          <div class="form-group">
+            <label for="full-name">Họ và tên:</label>
+            <input type="text" id="full-name" name="full-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Địa chỉ giao hàng:</label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">Phương thức thanh toán:</label>
+            <select id="payment-method" name="payment-method" required>
+              <option value="Thẻ tín dụng">Thẻ tín dụng</option>
+              <option value="Chuyển khoản ngân hàng">Chuyển khoản ngân hàng</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-button">Thanh toán</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 BMW - Trang Web Bán Ô Tô</p>
+    </footer>
+    <script src="./js_user_handle/thanhtoan_han.js"></script>
+  </body>
+</html>

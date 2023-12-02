@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng - BMW</title>
+    <link rel="stylesheet" href="./css/giohang.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BMW - Trang Web Bán Ô Tô</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="Product_I4.html">Sản phẩm</a></li>
+          <li><a href="giohang.html">Giỏ hàng</a></li>
+          <li><a href="thanhtoan.html">Thanh toán</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- right -->
+    <main2>
+      <section class="cart2">
+        <h2>Chọn sản phẩm</h2>
+        <div class="hiden">
+          <div class="hiden2">
+            <table class="cart3 ">
+              <!-- <tr>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Thêm vào giỏ</th>
+              </tr> -->
+              <!-- json -->
+              <!-- <tr>
+                <td>Xe BMW X5</td>
+                <td>99999 vnd</td>
+                <td><button>Thêm</button></td>
+              </tr> -->
+    
+            </table>
+
+          </div>
+        </div>
+      </section>
+    </main2>
+    <!-- left -->
+    <main>
+      <section class="cart">
+        <h2>Giỏ hàng</h2>
+        <div class="hiden">
+          <div class="hiden3">
+
+            <table class="carItem_main">
+              <tr>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng</th>
+                <th>Xóa</th>
+              </tr>
+              
+                <tr class="carItem">
+                  <td class="name_sp">Xe BMW X5</td>
+                  <td class="giagoc">75000</td>
+                  <td class="flex_td">
+                    <div  class="apart">-</div>
+                    <input class="number_shopping" type="number" value="1" min="1" />
+                    <div  class="apart_all">+</div>
+                  </td>
+                  <td class="price">75000</td>
+                  <td><button class="btn_xoa_giohang">Xóa</button></td>
+                </tr>
+     
+              <!-- <tr class="carItem">
+                <td>Xe BMW M3</td>
+                <td class="giagoc">85000</td>
+                <td class="flex_td">
+                  <div class="apart">-</div>
+                  <input class="number_shopping" type="number" value="1" min="1" />
+                  <div  class="apart_all">+</div>
+                </td>
+                <td class="price">85000</td>
+                <td><button>Xóa</button></td>
+              </tr> -->
+            </table>
+          </div>
+        </div>
+        <!-- <button class="update-button">Cập nhật giỏ hàng</button> -->
+        <p class="total">Tổng cộng: 0 VND</p>
+        <a href="thanhtoan.html" class="checkout-button"
+          >Tiến hành thanh toán</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 BMW - Trang Web Bán Ô Tô</p>
+    </footer>
+    <script type="module" src="./js_giohang/app.js"></script>
+   
+  </body>
+</html>

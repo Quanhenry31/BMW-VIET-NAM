@@ -1,0 +1,74 @@
+// <!-- bang tin dich vu -->
+.footer_car {
+  width: 100%;
+
+  //   background: aqua;
+  .footer_car_sercive {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+  }
+  .car_sercive {
+    display: inline-flex;
+    width: 290px;
+    height: 350px;
+    // background: antiquewhite;
+    margin: 36px;
+    margin-right: 16px;
+    border: 1px solid var(--bl-color5);
+  }
+  .car_sercive_all {
+    margin-bottom: 50px;
+    height: 100%;
+    padding: 16px;
+    h2 {
+      margin-top: 10px;
+      font-size: 35px;
+      font-weight: 100;
+    }
+    ul {
+      display: flex;
+      margin-top: 10px;
+    }
+    i.fa-solid.fa-angle-right {
+      margin-right: 6px;
+      color: var(--bl-color4);
+    }
+    a.display_i {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+  }
+}
+// <!-- controler-car -->
+.controler_car {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: auto;
+  .controler_all {
+    width: 290px;
+    height: 150px;
+    background: var(--bl-color1);
+    display: inline-flex;
+    margin: 0 37px;
+    margin-bottom: 50px;
+    .controler_conten {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      i.i_controler {
+        display: block;
+        padding: auto;
+        font-size: 32px;
+        padding: 30px 0px 40px 40%;
+      }
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: var(--bl-color4);
+      }
+    }
+  }
+}

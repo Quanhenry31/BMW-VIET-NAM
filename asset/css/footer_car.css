@@ -1,0 +1,72 @@
+.footer_car {
+  width: 100%;
+}
+.footer_car .footer_car_sercive {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.footer_car .car_sercive {
+  display: inline-flex;
+  width: 290px;
+  height: 350px;
+  margin: 36px;
+  margin-right: 16px;
+  border: 1px solid var(--bl-color5);
+}
+.footer_car .car_sercive_all {
+  margin-bottom: 50px;
+  height: 100%;
+  padding: 16px;
+}
+.footer_car .car_sercive_all h2 {
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: 100;
+}
+.footer_car .car_sercive_all ul {
+  display: flex;
+  margin-top: 10px;
+}
+.footer_car .car_sercive_all i.fa-solid.fa-angle-right {
+  margin-right: 6px;
+  color: var(--bl-color4);
+}
+.footer_car .car_sercive_all a.display_i {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.controler_car {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: auto;
+}
+.controler_car .controler_all {
+  width: 290px;
+  height: 150px;
+  background: var(--bl-color1);
+  display: inline-flex;
+  margin: 0 37px;
+  margin-bottom: 50px;
+}
+.controler_car .controler_all .controler_conten {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.controler_car .controler_all .controler_conten i.i_controler {
+  display: block;
+  padding: auto;
+  font-size: 32px;
+  padding: 30px 0px 40px 40%;
+}
+.controler_car .controler_all .controler_conten a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--bl-color4);
+}
+
+/*# sourceMappingURL=footer_car.css.map */

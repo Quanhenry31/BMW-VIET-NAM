@@ -1,0 +1,196 @@
+.Infor_I4 {
+  position: absolute;
+  top: 22%;
+  left: 7%;
+  color: white;
+  font-size: 20px;
+}
+
+h1.Infor_h1 {
+  margin: 0 0 12px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.conten_meu {
+  font-size: 17px;
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+}
+.conten_meu .Infor_h8 {
+  color: var(--bl-color-faded);
+}
+.conten_meu .infor_h1_conten {
+  margin: 20px 0px;
+}
+
+.conten_controler {
+  width: 100%;
+  height: 100px;
+}
+.conten_controler .conten_controler_ul {
+  width: 50.8%;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.conten_controler .conten_controler_ul ul {
+  display: flex;
+  width: 750px;
+  text-align: center;
+}
+.conten_controler .conten_controler_ul li {
+  width: 100%;
+  line-height: 70px;
+  font-weight: bold;
+}
+.conten_controler .conten_controler_ul li:hover {
+  cursor: pointer;
+  border-bottom: var(--bl--color-xanhb) solid 2px;
+}
+
+.conten_controler_sevice {
+  margin-bottom: 80px;
+  width: 100%;
+  height: 70px;
+}
+.conten_controler_sevice .conten_controler_sevice_1 {
+  width: 42%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+.conten_controler_sevice .conten_controler_sevice_1 .image_colorcar {
+  margin: auto;
+}
+.conten_controler_sevice .conten_controler_sevice_1 .image_colorcar .color_car1 {
+  width: 70px;
+  height: 70px;
+}
+
+.conten_controler_sevice_2 {
+  display: none;
+  width: 100%;
+  height: 70px;
+}
+.conten_controler_sevice_2 .conten_controler_sevice_1 {
+  width: 42%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+.conten_controler_sevice_2 .conten_controler_sevice_1 .image_colorcar {
+  margin: auto;
+}
+.conten_controler_sevice_2 .conten_controler_sevice_1 .image_colorcar .color_car1 {
+  width: 70px;
+  height: 70px;
+}
+
+.img_mamxe {
+  display: none;
+}
+
+.img_xanh {
+  display: none;
+}
+
+.img_trang {
+  display: none;
+}
+
+.h1_degiai {
+  margin: 50px 160px 30px 160px;
+}
+
+.animation_y {
+  animation: active ease-in-out 0.9s 1;
+}
+
+.video_dejainer {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 400px;
+}
+.video_dejainer .video_dejainer_left {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+.video_dejainer .video_dejainer_left .video_dejainer_left_v {
+  width: 100%;
+  height: 100%;
+}
+.video_dejainer .video_dejainer_right {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+.video_dejainer .video_dejainer_right .video_dejainer_right_v {
+  width: 100%;
+  height: 100%;
+}
+
+.footer_car {
+  width: 100%;
+}
+.footer_car .footer_car_sercive {
+  width: 96%;
+  height: 100%;
+  margin: auto;
+}
+.footer_car .car_sercive {
+  display: inline-flex;
+  width: 400px;
+  height: 475px;
+  margin: 36px;
+  margin-right: 16px;
+  border: 1px solid var(--bl-color5);
+}
+.footer_car .car_sercive_all {
+  margin-bottom: 50px;
+  height: 100%;
+  padding: 16px;
+}
+.footer_car .car_sercive_all h2 {
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: 100;
+}
+.footer_car .car_sercive_all ul {
+  display: flex;
+  margin-top: 10px;
+}
+.footer_car .car_sercive_all i.fa-solid.fa-angle-right {
+  margin-right: 6px;
+  color: var(--bl-color4);
+}
+.footer_car .car_sercive_all a.display_i {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.oder_car_main {
+  animation: shake 0.3s infinite;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  float: right;
+  top: 80%;
+  right: 30px;
+}
+.oder_car_main .oder_icon {
+  width: 70px;
+  background: blue;
+  height: 70px;
+}
+.oder_car_main .oder_icon i.fa-solid.fa-cart-plus {
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  line-height: 70px;
+  text-align: center;
+  color: var(--bl-color1);
+}
+
+/*# sourceMappingURL=Product_I4.css.map */

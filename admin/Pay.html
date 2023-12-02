@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo-bmw-3.png">
+    <link
+      rel="stylesheet"
+      href="../asset/fonts/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.css"
+    />
+    <link rel="stylesheet" href="../css/style_mainQT.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/click.js"></script>
+    <title>Quản lý cửa hàng bán BMW</title>
+</head>
+
+<body class="ok">
+    <div class="main_height">
+
+        <section class="header">
+            <a href="javascript:void(0);" class="icon" onclick="openBTN()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <div class="box-login" id="box-t">
+                Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+                <div class="box-login-bottom" id="box-b">
+                    <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                    <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="row">
+                <div class="col-1 col-s-12 category">
+                    <button onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</button>
+                    <button onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</button>
+                    <button onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</button>
+                    <button onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</button>
+                    <button onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</button>
+                    <button class="active" onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</button>
+                    <button class="active" onclick="CTHoaDonBan()"><i class="fas fa-shopping-cart"></i> Chi tiết hóa đơn bán</button>
+                    <button class="active" onclick="Pay()"><i class="fa-brands fa-cc-amazon-pay"></i> Payment</button>
+                    <button onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</button>
+                </div>
+                <div class="bx-left" id="button-left">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeBTN()"><i
+                            class="far fa-window-close"></i></a>
+                    <ul>
+                        <li onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</li>
+                        <li onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</li>
+                        <li onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</li>
+                        <li onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</li>
+                        <li onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</li>
+                        <li onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</li>
+                        <li onclick="CTHoaDonBan()"><i class="fas fa-shopping-cart"></i> Chi tiết hóa đơn bán</li>
+                        <li onclick="Pay()"><i class="fa-brands fa-cc-amazon-pay"></i> Payment</li>
+                        <li onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</li>
+                    </ul>
+                </div>
+                <div class="col-11 col-s-12 content">
+                    <div class="col-4 col-s-12 content">
+                        <div class="tabcontent">
+                            <div class="title">
+                                <i class="fas fa-barcode"></i> Nhập thông tin thanh toán
+                                <hr>
+                            </div>
+                            <div class="row">
+                                <form>
+                                   
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="txtright">PaymentID:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="PaymentID"
+                                            placeholder="Nhập mã Pay...Tự động sinh nếu không nhập...">
+                                    </div>
+    
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="txtright">OrderID:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="OrderID" placeholder="Nhập OrderID...">
+                                    </div>
+                                   
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="txtright">Name:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="Name" placeholder="Nhập Name...">
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="text">PaymentDate:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="PaymentDate" placeholder="Nhập PaymentDate">
+                                    </div>
+    
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="txtAmount">Amount:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="Amount" placeholder="Nhập Amount $">
+                                    </div>
+
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <label for="text">PaymentMethod:</label>
+                                    </div>
+                                    <div class="col-12 col-s-12 padding-box">
+                                        <input type="text" id="PaymentMethod" placeholder="Nhập PaymentMethod">
+                                    </div>
+                                </form>
+                            </div>
+                            <hr>
+                            <button class="btn-form addPay" style="background-color: rgba(44, 140, 15, 0.8);">Thêm sản phẩm</button>
+                            <button class="btn-form updatePay" style="background-color: rgba(14, 87, 224, 0.8);" id="btnUpdate">Cập nhật thông tin</button>
+                            <button class="btn-form deletePay" style="background-color: rgba(227, 32, 21, 0.8);">Xóa</button>
+                        </div>
+                    </div>
+                    <!-- phan load du kieu data -->
+                    <div class="col-8 col-s-12 content">
+                        <div class="tabcontent">
+                            <div class="title">
+                                <i class="fas fa-barcode"></i> Danh sách thanh toán
+                                <button onclick="XoaChon()" style="margin-right: 3px;"><i class="far fa-trash-alt"></i> Xóa
+                                    chọn</button>
+                                <hr>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 col-s-12 padding-box">
+                                    <input type="text" id="s_trang"
+                                        placeholder="Nhập trang cần chia">
+                                </div>
+                                <div class="col-3 col-s-12 padding-box">
+                                    <input type="text" id="s_quantity"
+                                    placeholder="Nhập số lượng cần tìm">
+                                </div>
+                                <div class="col-3 col-s-12 padding-box">
+                                    <input type="text" id="s_name"
+                                    placeholder="Nhập Tên sản phầm">
+                                </div>
+                                <div class="col-2 col-s-12 padding-box">
+                                    <button class="timkiem_btn timkiem_btn_hd timkiem_user"><i class="fas fas fa-search"></i> Tìm kiếm</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-s-12 padding-box over_flowy">
+                                    <table class="product_json">
+                                        <thead>
+                                            <tr>    
+                                                <th>PaymentID</th>
+                                                <th>OrderID</th>
+                                                <th>Name</th>
+                                                <th>PaymentDate</th>
+                                                <th>Amount</th>
+                                                <th>PaymentMethod</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="pay_model">
+                                            <!-- <tr>
+                                                <td style="text-align: center;padding-top: 10px;"><input type="checkbox"
+                                                        value="" id=""></td>
+                                                <td>111111</td>
+                                                <td>Máy trạm Workstation Dell Precision T582042PT58DW27 Mini Tower</td>
+                                                <td>
+                                                    <img src="/Project_2/img/DH_WORKSTATION/Dell_Precision_T5820.jpg">
+                                                </td>
+                                                <td style="text-align: center;">20</td>
+                                                <td style="text-align: right;">48900000</td>
+                                                <td>PC ĐỒ HOẠ – WORKSTATION</td>
+                                                <td>Trần Anh</td>
+                                                <td style="text-align: center;">
+                                                    <i class="fas fa-edit" title="Sửa" onclick="SuaSanPham()"></i>
+                                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                       
+                                    </table>
+                                </div>
+                                <div class="col-12 col-s-12 padding-box">
+                                    <div class="box-sum">
+                                        <div class="box-left">Số lượng sản phẩm: <span id="soluong">0</span></div>
+                                        <div class="box-right">
+                                            <button>1</button>
+                                            <button>2</button>
+                                            <button>3</button>
+                                            <button>4</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="../js_admin/app.js"></script>
+    <script src="../js_admin_handle/pay_han.js"></script>
+</body>
+
+</html>

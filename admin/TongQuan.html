@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo-bmw-3.png">
+    <link
+    rel="stylesheet"
+    href="../asset/fonts/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.css"
+  />
+    <link rel="stylesheet" href="../css/style_mainQT.css">
+    <script src="https://kit.fontawesome.com/e06076012c.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/click.js"></script>
+    <title>Quản lý cửa hàng bán BMW</title>
+</head>
+<body>
+    <section class="header">
+        <a href="javascript:void(0);" class="icon" onclick="openBTN()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="row">
+            <div class="col-1 col-s-12 category">
+                <button onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</button>
+                <button onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</button>
+                <button onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</button>
+                <button onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</button>
+                <button onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</button>
+                <button class="active" onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</button>
+                <button class="active" onclick="CTHoaDonBan()"><i class="fas fa-shopping-cart"></i> Chi tiết hóa đơn bán</button>
+                <button class="active" onclick="Pay()"><i class="fa-brands fa-cc-amazon-pay"></i> Payment</button>
+                <button onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</button>
+            </div>
+            <div class="bx-left" id="button-left">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeBTN()"><i
+                        class="far fa-window-close"></i></a>
+                <ul>
+                    <li onclick="TongQuan()"><i class="fas fa-tachometer-alt"></i> Tổng quan</li>
+                    <li onclick="SanPham()"><i class="fas fa-barcode"></i> Sản phẩm</li>
+                    <li onclick="KhachHang()"><i class="fas fa-users"></i> Khách hàng</li>
+                    <li onclick="NhanVien()"><i class="fas fa-user"></i> Nhân viên</li>
+                    <li onclick="HoaDonNhap()"><i class="fas fa-file-import"></i> Hóa đơn nhập</li>
+                    <li onclick="HoaDonBan()"><i class="fas fa-shopping-cart"></i> Hóa đơn bán</li>
+                    <li onclick="CTHoaDonBan()"><i class="fas fa-shopping-cart"></i> Chi tiết hóa đơn bán</li>
+                    <li onclick="Pay()"><i class="fa-brands fa-cc-amazon-pay"></i> Payment</li>
+                    <li onclick="ThietLap()"><i class="fas fa-cogs"></i> Thiết lập</li>
+                </ul>
+            </div>
+            <div class="col-11 col-s-12 content">
+                <div class="col-12 col-s-12 content">
+                    <div class="tabcontent">
+                        <div class="title">
+                            <i class="fas fa-signal"></i> Hoạt động hôm nay
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box" style="background-color: #9abc32;">
+                                    <div class="box-left"><i class="fas fa-signal"></i></div>
+                                    <div class="box-right">Tiền bán hàng<br><span class="tienbanhang">0</span></div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box" style="background-color: #6FB3E0;">
+                                    <div class="box-left"><i class="fas fa-cloud"></i></div>
+                                    <div class="box-right">
+                                        Số đơn hàng: <span class="sl_hoadon">0</span><br>
+                                        Số sản phẩm: <span class="sanpham">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box" style="background-color: #D53F;">
+                                    <div class="box-left"><i class="fas fa-undo-alt"></i></div>
+                                    <div class="box-right">Khách hàng trả<br><span>0</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thongke_main">
+                            <div class="thongke_vip">
+                                <div id="chartContainer_1" style="height: 100%; width: 100%;"></div>
+                            </div>
+                            <div class="thongke_sp">
+                                <div id="chartContainer_2" style="height: 100%; width: 100%;"></div>
+                            </div>
+                            <div class="thongke_doanhso">
+                                <div id="chartContainer_3" style="height: 100%; width: 100%;"></div>
+                            </div>
+                        </div>
+    
+
+                        <div class="row">
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box2" style="border: 1px solid #6FB3E0;">
+                                    <div class="box2-top" style="border-bottom: 1px solid #6FB3E0;">
+                                        <i class="fas fa-signal"></i> Hoạt động
+                                    </div>
+                                    <div class="box2-bot">
+                                        <div class="box2-bot-left">Tiền bán hàng</div>
+                                        <div class="box2-bot-right tienbanhang">0</div>
+                                        <div class="box2-bot-left">Số sản phẩm đã bán</div>
+                                        <div class="box2-bot-right so_sp_daban">0</div>
+                                        
+                                        <div class="box2-bot-left">Khách trả hàng</div>
+                                        <div class="box2-bot-right khachhangtra">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box2" style="border: 1px solid #E8B110;">
+                                    <div class="box2-top" style="border-bottom: 1px solid #E8B110;">
+                                        <i class="fas fa-boxes"></i> Thông tin hóa đơn
+                                    </div>
+                                    <div class="box2-bot">
+                                        <div class="box2-bot-left">Số lượng hóa đơn</div>
+                                        <div class="box2-bot-right sl_hoadon">0</div>
+                                        <div class="box2-bot-left">Đang duyệt</div>
+                                        <div class="box2-bot-right dang_duyet">0</div>
+                                        <div class="box2-bot-left">Đã duyệt</div>
+                                        <div class="box2-bot-right da_duyet">0</div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box2" style="border: 1px solid #9ABC32;">
+                                    <div class="box2-top" style="border-bottom: 1px solid #9ABC32;">
+                                        <i class="fas fa-boxes"></i> Thông tin thanh toán
+                                    </div>
+                                    <div class="box2-bot">
+                                        <div class="box2-bot-left">Chuyển khoản ngân hàng</div>
+                                        <div class="box2-bot-right ngan_hang">0</div>
+                                        <div class="box2-bot-left">Chuyển khoản thẻ tín dụng</div>
+                                        <div class="box2-bot-right tin_dung">0</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-4 col-s-12 padding-box">
+                                <div class="box2" style="border: 1px solid #9ABC32; 
+                                height: 312px;">
+                                    <div class="box2-top" style="border-bottom: 1px solid #9ABC32;">
+                                        <i class="fas fa-boxes"></i> Thông tin sản phẩm
+                                    </div>
+                                    <div class="box2-bot">
+                                        <div class="box2-bot-left">Sản phẩm</div>
+                                        <div class="box2-bot-right sanpham">0</div>
+                                        <div class="box2-bot-left">BMW_I</div>
+                                        <div class="box2-bot-right BMW_I">0</div>
+                                        <div class="box2-bot-left">BMW_X</div>
+                                        <div class="box2-bot-right BMW_X">0</div>
+                                        <div class="box2-bot-left">BMW_3</div>
+                                        <div class="box2-bot-right BMW_3">0</div>
+                                        <div class="box2-bot-left">BMW_4</div>
+                                        <div class="box2-bot-right BMW_4">0</div>
+                                        <div class="box2-bot-left">BMW_5</div>
+                                        <div class="box2-bot-right BMW_5">0</div>
+                                        <div class="box2-bot-left">BMW_7</div>
+                                        <div class="box2-bot-right BMW_7">0</div>
+                                        <div class="box2-bot-left">BMW_8</div>
+                                        <div class="box2-bot-right BMW_8">0</div>
+                                        <div class="box2-bot-left">BMW_Z4</div>
+                                        <div class="box2-bot-right BMW_z4_o">0</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="../js_admin//Thongke.js"></script>
+</body>
+
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</html>
